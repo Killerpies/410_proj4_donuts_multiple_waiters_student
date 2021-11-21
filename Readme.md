@@ -1,6 +1,8 @@
 **CPSC 410**
 
 **Project 4**
+## Due Date:
+Friday Dec 3rd at midnight.  Please submit 2 files to scholar (waiter.cpp and Baker.cpp)
 
 ## Motivation: Topics covered by this project;
 
