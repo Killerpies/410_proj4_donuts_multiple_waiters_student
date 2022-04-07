@@ -2,7 +2,7 @@
 
 **Project 4**
 ## Due Date:
-Friday Dec 3rd at midnight.  Please submit 2 files to scholar (waiter.cpp and Baker.cpp)
+Sat April 16 at midnight.
 
 ## Motivation: Topics covered by this project;
 
@@ -94,14 +94,8 @@ wherever you need those global variables.
 
 Please do not modify the project directory structure
 
-## To Turn In
-
-waiter.cpp, baker.cpp ONLY!
 
 ## Grading
-
-I will drop your waiter.cpp and baker.cpp into the appropriate places in
-my project. Therefore these are the only files that I need from you.
 
 20% waiter.cpp and baker.cpp files submitted as described in 'ToTurn In'
 
