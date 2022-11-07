@@ -1,8 +1,6 @@
 **CPSC 410**
 
 **Project 4**
-## Due Date:
-Sat April 16 at midnight.
 
 ## Motivation: Topics covered by this project;
 
