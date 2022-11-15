@@ -1,0 +1,41 @@
+
+ For file inlots.txt
+CORRECT Total donuts made   = 2496
+CORRECT Total orders made   = 23
+CORRECT Total boxes made   = 218
+
+ For file in1.txt
+CORRECT Total donuts made   = 15
+CORRECT Total orders made   = 1
+CORRECT Total boxes made   = 2
+
+ For file inlots.txt
+CORRECT Total donuts made   = 2496
+CORRECT Total orders made   = 23
+CORRECT Total boxes made   = 218
+
+ For file in1.txt
+CORRECT Total donuts made   = 15
+CORRECT Total orders made   = 1
+CORRECT Total boxes made   = 2
+
+ For file inlots.txt
+CORRECT Total donuts made   = 2496
+CORRECT Total orders made   = 23
+CORRECT Total boxes made   = 218
+
+ For file in1.txt
+CORRECT Total donuts made   = 15
+CORRECT Total orders made   = 1
+CORRECT Total boxes made   = 2
+
+ For file inlots.txt
+CORRECT Total donuts made   = 2496
+CORRECT Total orders made   = 23
+CORRECT Total boxes made   = 218
+
+ For file in1.txt
+CORRECT Total donuts made   = 15
+CORRECT Total orders made   = 1
+CORRECT Total boxes made   = 2
+Total points=100

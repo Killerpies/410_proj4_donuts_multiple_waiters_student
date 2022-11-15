@@ -1,4 +1,4 @@
-**CPSC 410**
+num_working_waitersnum_working_waiters**CPSC 410**
 
 **Project 4**
 
@@ -95,12 +95,10 @@ Please do not modify the project directory structure
 
 ## Grading
 
-20% waiter.cpp and baker.cpp files submitted as described in 'ToTurn In'
-
 20% Your program uses the mutex mutex_order_inQ to protect order_in_Q
 and mutex mutex_order_outQ to protect order_out_Vector.
 
-60% Otherwise I will use the average of total_pts for several runs of
+80% Otherwise I will use the average of total_pts for several runs of
 the program using your baker and waiter.
 
 ## Other Hints
