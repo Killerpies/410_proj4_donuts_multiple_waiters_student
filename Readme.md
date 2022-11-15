@@ -92,6 +92,9 @@ wherever you need those global variables.
 
 Please do not modify the project directory structure
 
+## Sample Run
+
+See Correct_Run_Output/console.txt for output from correctly implemented Baker and waiter
 
 ## Grading
 
