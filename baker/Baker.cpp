@@ -37,7 +37,11 @@ void Baker::bake_and_box(ORDER &anOrder) {
 	 */
 void Baker::beBaker() {
 	unique_lock<mutex> lck(mutex_order_inQ);
-	while (order_in_Q.empty()) {
+	while (order_in_Q.empty() || all_work_done) {
 		cv_order_inQ.wait(lck);
 	}
+	ORDER temp = order_in_Q.front();
+	this->bake_and_box(temp);
+
+
 }
