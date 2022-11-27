@@ -3,7 +3,7 @@
 #include "../includes/baker.h"
 #include "../includes/externs.h"
 #include "../includes/PRINT.h"
-
+#include "../includes/box.h"
 using namespace std;
 
 
@@ -21,6 +21,19 @@ Baker::Baker(int id):id(id)
 	 * @param anOrder  the order to bake box and append to order_out_Vector
 	 */
 void Baker::bake_and_box(ORDER &anOrder) {
+	unique_lock<mutex> lck(mutex_order_outQ);
+	Box temp;
+	for (int i = 0; i<anOrder.number_donuts; i++){
+		DONUT tempDonut;
+		temp.addDonut(tempDonut);
+		if (temp.size() == 12 || i== anOrder.number_donuts- 1) {
+			anOrder.boxes.push_back(temp);
+			temp.clear();
+		}
+	}
+	temp.clear();
+	order_out_Vector.push_back(anOrder);
+
 }
 
 /**
@@ -37,11 +50,14 @@ void Baker::bake_and_box(ORDER &anOrder) {
 	 */
 void Baker::beBaker() {
 	unique_lock<mutex> lck(mutex_order_inQ);
-	while (order_in_Q.empty() || all_work_done) {
+	while (order_in_Q.empty() && !all_work_done) {
 		cv_order_inQ.wait(lck);
 	}
-	ORDER temp = order_in_Q.front();
-	this->bake_and_box(temp);
-
-
+	while (!order_in_Q.empty()){
+		ORDER temp = order_in_Q.front();
+		order_in_Q.pop();
+		this->bake_and_box(temp);
+	}
+	lck.unlock();
+	cv_order_inQ.notify_all();
 }

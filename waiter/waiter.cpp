@@ -42,21 +42,17 @@ int Waiter::getNext(ORDER &anOrder){
 	 * then signals baker(s) using cv_order_inQ that it is done
 	 */
 void Waiter::beWaiter() {
-	while (!all_work_done){
-		unique_lock<mutex> lck(mutex_order_inQ);
-		ORDER temp;
-		int hasLeft = this->getNext(temp);
-		if (hasLeft == NO_ORDERS) {
-			all_work_done=true;
-			num_working_waiters -=1;
-		}
-		else {
-			order_in_Q.push(temp);
-			cv_order_inQ.notify_all();
-		}
+	unique_lock<mutex> lck(mutex_order_inQ);
+	ORDER temp;
+	while(this->getNext(temp) != NO_ORDERS){
+		order_in_Q.push(temp);
 	}
-
-
+	num_working_waiters -=1;
+	if (num_working_waiters == 0){
+		all_work_done=true;
+	}
+	lck.unlock();
+	cv_order_inQ.notify_all();
 }
 
 
